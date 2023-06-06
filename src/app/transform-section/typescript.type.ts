@@ -1,5 +1,5 @@
 interface TransformerMessage {
-    heading: string[];
+    heading: string;
     message: string;
     redirectLink: string[];
 }

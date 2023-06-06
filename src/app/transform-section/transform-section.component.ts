@@ -12,7 +12,7 @@ export class TransformSectionComponent {
   faArrowRight = faArrowRight;
 
   message: TransformerMessage = {
-    heading: ['Transforming', 'organizations', 'driving', 'value'],
+    heading: 'Transforming organizations, driving value',
     message: "People are the core to our every team, business, and process. We bring value by optimally combining the art and science of finding the right talent and the right role. Our streamlined processes and understanding of industry dynamics empower us to efficiently solve talent and recruitment problems.",
     redirectLink: ["https://indihire.com/what-we-do", "https://indihire.com/navigate-to-your-next-opportunity/#job-opportunities"]
   };

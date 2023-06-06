@@ -1,56 +1,48 @@
-<section>
-    <div class="main_container">
-        <!-- left side -->
-        <div class="left_hand_row">
-            <div>
-                <h2>
-                    <span>{{ transformSectionData.transformerMessage.heading[0] }}</span>
-                    <span>{{ transformSectionData.transformerMessage.heading[1] }},</span>
-                    <span>{{ transformSectionData.transformerMessage.heading[2] }}</span>
-                    <span>{{ transformSectionData.transformerMessage.heading[3] }}</span>
-                </h2>
-            </div>
+<section class="hire">
+  <div class="hire_first_div">
+    <div>
+      <div class="first_inside_hire">
+        {{ transformSectionData.transformerMessage.heading}}
+      </div>
 
-            <div class="left_hand_row_text_with_image">
-                <img src="{{ transformSectionData.behindImages[0] }}" alt="Left Image">
-                <p>{{ transformSectionData.transformerMessage.message }}</p>
-            </div>
+      <div class="second_inside_hire">
 
-            <!-- position absolutely in mobile -->
-            <div>
-                <button class="custom-button">
-                    Learn about our solutions
-                    <fa-icon [icon]="faArrowRight" class="icon_rotate" ></fa-icon>
-                </button>
-                <button class="custom-button">
-                    Find jobs
-                    <fa-icon [icon]="faArrowRight" class="icon_rotate"></fa-icon>
-                </button>
-            </div>
+        <p>{{ transformSectionData.transformerMessage.message }}</p>
 
-        </div>
+      </div>
+      <div class="third_inside_hire">
+        <button class="custom_button_1">
+          Learn about our solutions
+          <img src="../../assets/images/white-arrow.png" class="arrowimage" alt="uparrow" />
+        </button>
+        <button class="custom_button_2">
+          Find jobs
+          <img src="../../assets/images/white-arrow.png" class="arrowimage" alt="uparrow" />
+        </button>
+      </div>
+    </div>
 
-        <!-- right-side -->
-        <div class="right_hand_row">
-            <img src="{{ transformSectionData.behindImages[1] }}" alt="Left Image">
-          
-            <div class="swiper-container">
-              <div class="swiper-wrapper" id="carouselWrapper">
-                <div *ngFor="let data of transformSectionData.swiperData" class="swiper-slide"  [ngStyle]="{'transform': 'translateX(' + slidePosition + '%)'}">
-                  <img src="{{ data.image }}" alt="{{ data.title }}">
-                  <p>{{ data.title }}</p>
-                </div>
-              </div>
-          
-              <div class="arrowBtn">
-                <img src="{{ ArrowImage }}" alt="See left" class="rotate" (click)="previousSlide()">
-                <img src="{{ ArrowImage }}" alt="See Right" (click)="nextSlide()">
-              </div>
+    <div>
+      <div class="hire_right_div">
+
+        <div class="swiper-container">
+          <div class="swiper-wrapper" id="carouselWrapper">
+            <div *ngFor="let data of transformSectionData.swiperData" class="swiper-slide"
+              [ngStyle]="{'transform': 'translateX(' + slidePosition + '%)'}">
+              <img src="{{ data.image }}" alt="{{ data.title }}">
+              <p>{{ data.title }}</p>
             </div>
           </div>
-          
+
+          <div class="arrowBtn">
+            <img src="{{ ArrowImage }}" alt="See left" class="rotate" (click)="previousSlide()">
+            <img src="{{ ArrowImage }}" alt="See Right">
+          </div>
+        </div>
 
 
 
+      </div>
     </div>
+  </div>
 </section>
