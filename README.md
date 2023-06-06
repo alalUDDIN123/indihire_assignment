@@ -17,7 +17,7 @@
    - Installed packages: `npm install @fortawesome/angular-fontawesome@0.13.0 @fortawesome/fontawesome-svg-core@6.4.0 @fortawesome/free-solid-svg-icons@6.4.0`
 
 ### **Deployed link** 🚀 
-The deployed application is available here: [https://indihire](https://indihire.netlify.app/)
+The deployed application is available here: [https://indihireassignment.netlify.app/](https://indihireassignment.netlify.app/)
 
 ---
 
