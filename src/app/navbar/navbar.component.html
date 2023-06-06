@@ -1,0 +1,37 @@
+<header>
+    <!-- logo section -->
+    <div>
+        <img src="https://indihire.com/wp-content/uploads/2022/03/logo.png" alt="Indihire">
+    </div>
+
+    <!-- ul, li, and anchor tag right-hand side section of nav -->
+    <div>
+        <ul>
+            <li><a href="https://indihire.com/" target="_blank">What we do</a></li>
+            <li><a href="https://indihire.com/" target="_blank">Expertise</a></li>
+            <li><a href="https://indihire.com/" target="_blank">Find jobs</a></li>
+            <li><a href="https://indihire.com/" target="_blank">About us</a></li>
+            <li><a href="https://indihire.com/" target="_blank">Resources</a></li>
+            <li><a href="https://indihire.com/" target="_blank">Contact us</a></li>
+        </ul>
+    </div>
+
+
+    <!-- hamburger -->
+
+    <div class="hamburger">
+        <fa-icon [icon]="hamburGerIcon" *ngIf="!isOpen" (click)=" toggleMenu()"></fa-icon>
+        <fa-icon [icon]="closeIcon" *ngIf="isOpen" (click)="  toggleMenu()"></fa-icon>
+    </div>
+
+    <div class="nav-menu" *ngIf="isOpen">
+        <ul>
+            <li><a href="https://indihire.com/" target="_blank">What we do</a></li>
+            <li><a href="https://indihire.com/" target="_blank">Expertise</a></li>
+            <li><a href="https://indihire.com/" target="_blank">Find jobs</a></li>
+            <li><a href="https://indihire.com/" target="_blank">About us</a></li>
+            <li><a href="https://indihire.com/" target="_blank">Resources</a></li>
+            <li><a href="https://indihire.com/" target="_blank">Contact us</a></li>
+        </ul>
+    </div>
+</header>

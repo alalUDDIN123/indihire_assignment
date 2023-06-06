@@ -1,0 +1,56 @@
+<section>
+    <div class="main_container">
+        <!-- left side -->
+        <div class="left_hand_row">
+            <div>
+                <h2>
+                    <span>{{ transformSectionData.transformerMessage.heading[0] }}</span>
+                    <span>{{ transformSectionData.transformerMessage.heading[1] }},</span>
+                    <span>{{ transformSectionData.transformerMessage.heading[2] }}</span>
+                    <span>{{ transformSectionData.transformerMessage.heading[3] }}</span>
+                </h2>
+            </div>
+
+            <div class="left_hand_row_text_with_image">
+                <img src="{{ transformSectionData.behindImages[0] }}" alt="Left Image">
+                <p>{{ transformSectionData.transformerMessage.message }}</p>
+            </div>
+
+            <!-- position absolutely in mobile -->
+            <div>
+                <button class="custom-button">
+                    Learn about our solutions
+                    <fa-icon [icon]="faArrowRight" class="icon_rotate" ></fa-icon>
+                </button>
+                <button class="custom-button">
+                    Find jobs
+                    <fa-icon [icon]="faArrowRight" class="icon_rotate"></fa-icon>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- right-side -->
+        <div class="right_hand_row">
+            <img src="{{ transformSectionData.behindImages[1] }}" alt="Left Image">
+          
+            <div class="swiper-container">
+              <div class="swiper-wrapper" id="carouselWrapper">
+                <div *ngFor="let data of transformSectionData.swiperData" class="swiper-slide"  [ngStyle]="{'transform': 'translateX(' + slidePosition + '%)'}">
+                  <img src="{{ data.image }}" alt="{{ data.title }}">
+                  <p>{{ data.title }}</p>
+                </div>
+              </div>
+          
+              <div class="arrowBtn">
+                <img src="{{ ArrowImage }}" alt="See left" class="rotate" (click)="previousSlide()">
+                <img src="{{ ArrowImage }}" alt="See Right" (click)="nextSlide()">
+              </div>
+            </div>
+          </div>
+          
+
+
+
+    </div>
+</section>
