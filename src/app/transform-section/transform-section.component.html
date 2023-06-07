@@ -4,7 +4,6 @@
       <div class="first_inside_hire">
         {{ transformSectionData.transformerMessage.heading}}
       </div>
-
       <div class="second_inside_hire">
 
         <p>{{ transformSectionData.transformerMessage.message }}</p>
@@ -17,7 +16,7 @@
         </button>
         <button class="custom_button_2">
           Find jobs
-          <img src="../../assets/images/white-arrow.png" class="arrowimage" alt="uparrow" />
+          <img src="https://indihire.vercel.app/assets/Icons/black-arrow.png" class="arrowimage" alt="uparrow" />
         </button>
       </div>
     </div>
@@ -27,16 +26,15 @@
 
         <div class="swiper-container">
           <div class="swiper-wrapper" id="carouselWrapper">
-            <div *ngFor="let data of transformSectionData.swiperData" class="swiper-slide"
-              [ngStyle]="{'transform': 'translateX(' + slidePosition + '%)'}">
-              <img src="{{ data.image }}" alt="{{ data.title }}">
-              <p>{{ data.title }}</p>
+            <div class="swiper-slide" id="imageContainer">
+              <img id="carouselImage" src="" alt="">
+              <p id="carouselTitle"></p>
             </div>
           </div>
 
           <div class="arrowBtn">
-            <img src="{{ ArrowImage }}" alt="See left" class="rotate" (click)="previousSlide()">
-            <img src="{{ ArrowImage }}" alt="See Right">
+            <img src="{{ ArrowImage }}" alt="See left" class="rotate" (click)="previousSlide()" >
+            <img src="{{ ArrowImage }}" alt="See Right" (click)=" nextSlide()" >
           </div>
         </div>
 
